@@ -171,6 +171,10 @@ public class Socket {
         this.timer = new Timer("Reconnect Timer for " + endpointUri);
     }
 
+    public void updateEndpointURI(final String endpointUri) {
+        this.endpointUri = endpointUri;
+    }
+
     /**
      * Retrieve a channel instance for the specified topic
      *
@@ -292,7 +296,7 @@ public class Socket {
      *
      * @param reconnectOnFailure reconnect value
      */
-    public void reconectOnFailure(final boolean reconnectOnFailure) {
+    public void reconnectOnFailure(final boolean reconnectOnFailure) {
         this.reconnectOnFailure = reconnectOnFailure;
     }
 
